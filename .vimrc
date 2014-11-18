@@ -10,8 +10,8 @@ let g:syntastic_warning_symbol='⚠'
 let g:syntastic_check_on_open=1
 let g:syntastic_phpcs_conf = "--tab-width=4 --standard=CodeIgniter"
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-let g:syntastic_javascript_syntax_checker="jshint"
-let g:syntastic_javascript_jshint_conf="~/jshintrc.json"
+"let g:syntastic_javascript_syntax_checker='jshint'
+"let g:syntastic_javascript_jshint_args = '--config /Users/liyi/jshintrc.json'
 
 "sounds
 set noerrorbells
@@ -74,6 +74,7 @@ set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:
 
 set nocompatible
 set nobackup
+set undodir=~/.undodir
 
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu
@@ -152,7 +153,7 @@ vnoremap p "_dP
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap { {}<ESC>i
-inoremap < <><ESC>i
+"inoremap < <><ESC>i
 inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
 
@@ -292,7 +293,7 @@ nnoremap <F3> :call PhpDoc()<CR>
 "PowerLine插件 状态栏增强显示
 set laststatus=2
 set t_Co=256
-let g:Powline_symbols='fancy'
+let g:Powerline_symbols = 'fancy'
 
 " 选中状态下 Ctrl+c 复制
 vmap <C-c> "+y
@@ -325,3 +326,9 @@ endfunction
 
 let g:pydiction_location = '/Users/liyi/.vim/bundle/pydiction/complete-dict'
 let g:pydiction_menu_height=3
+
+"source ~/.vim/bundle/minibufexpl.vim
+"let g:miniBufExplMapWindowNavVim = 1 
+"let g:miniBufExplMapWindowNavArrows = 1 
+"let g:miniBufExplMapCTabSwitchBufs = 1 
+"let g:miniBufExplModSelTarget = 1 
