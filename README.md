@@ -85,3 +85,13 @@ rm -r ~/.vim/bundle/vim-pathogen
 git submodule add https://github.com/tpope/vim-pathogen.git   bundle/vim-pathogen
 
 即可
+
+2) 正克隆到 '/Users/shanli/.vim/bundle/vim-pathogen'...
+fatal: 远程错误：
+  The unauthenticated git protocol on port 9418 is no longer supported.
+Please see https://github.blog/2021-09-01-improving-git-protocol-security-github/ for more information.
+
+解决：
+git config --global url."https://".insteadOf git://
+git submodule update
+
